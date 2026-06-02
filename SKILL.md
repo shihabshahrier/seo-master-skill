@@ -2,14 +2,24 @@
 name: seo-master
 description: >
   Complete SEO + GEO (Generative Engine Optimization) + AEO (Answer Engine
-  Optimization) playbook for 2026. Covers traditional search ranking, how
-  AI engines (ChatGPT, Claude, Gemini, Perplexity, Copilot) discover/rank/cite
-  pages, structured data, technical SEO, the title/meta system, content
-  strategy, IndexNow, Google + Bing Search Console setup, competitor analysis,
-  and a concrete implementation checklist. Use when optimizing any website for
+  Optimization) playbook for 2026. Covers traditional search ranking, how AI
+  engines + coding agents (ChatGPT/Bing, Claude+Claude Code/Codex/OpenClaw/Brave,
+  Gemini/Google, Perplexity) discover/rank/cite pages, framework-aware
+  implementation (Next.js App Router Metadata API + React SPA prerender),
+  structured data, technical SEO, titles/meta, content strategy, IndexNow,
+  Google + Bing Search Console, competitor analysis, the 2026 I/O + core-update
+  changes, and a prioritized checklist. Use when optimizing any website for
   search engines and AI answer engines, planning content/SEO strategy, adding
-  structured data, fixing titles/meta, getting cited by AI chatbots, or setting
-  up Search Console / Webmaster Tools.
+  structured data, fixing titles/meta, getting cited by AI chatbots/agents, or
+  setting up Search Console.
+license: MIT
+user-invocable: true
+argument-hint: '[site path or URL to optimize]'
+when_to_use: >
+  Optimizing a website for search + AI answer engines; planning content/SEO
+  strategy; implementing SEO in Next.js or React; adding structured data; fixing
+  titles/meta; getting cited by ChatGPT/Claude/Gemini/coding agents; setting up
+  Google/Bing Search Console + IndexNow.
 ---
 
 # SEO Master Skill (SEO + GEO + AEO, 2026)
@@ -31,20 +41,28 @@ not one task but several.
 
 ## How to use this skill
 
-1. Read `references/ai-engines-and-indexes.md` FIRST — it determines *where* to
-   optimize. Wrong index = invisible to that AI.
-2. Run the audit in `references/implementation-checklist.md` against the site.
-3. Fix in priority order: indexing reach → structured data → answer-first
+1. **Detect the stack first** (`package.json` → Next.js App/Pages Router, React
+   SPA, Astro, Remix…). Implementation differs by render model. See
+   `references/framework-seo.md`.
+2. Read `references/ai-engines-and-indexes.md` — determines *where* to optimize.
+   Wrong index = invisible to that AI. (Coding agents like Claude Code / Codex /
+   OpenClaw / Hermes mostly ground on **Brave**.)
+3. Skim `references/whats-new-2026.md` for the I/O 2026 + May core-update context
+   (AI Mode on Gemini 3.5 Flash; "AEO/GEO is still SEO"; llms.txt is optional).
+4. Run the audit in `references/implementation-checklist.md` against the site.
+5. Fix in priority order: indexing reach → structured data → answer-first
    content → titles/meta → content moat.
-4. Use `references/search-console-setup.md` for Google + Bing + IndexNow.
-5. Use `references/structured-data.md` and `references/content-and-aeo.md` as
+6. Use `references/search-console-setup.md` for Google + Bing + IndexNow, and
+   `references/structured-data.md` / `references/content-and-aeo.md` as
    copy/paste references while implementing.
 
 ## Reference files (read as needed)
 
 | File | What's in it |
 |------|--------------|
-| `references/ai-engines-and-indexes.md` | Which index each AI uses, how each cites, per-engine tactics |
+| `references/ai-engines-and-indexes.md` | Which index each AI + coding agent uses (Brave/Bing/Google), how each cites, per-engine tactics |
+| `references/framework-seo.md` | Detect the stack; Next.js App Router Metadata API (`metadata`/`generateMetadata`, sitemap/robots/OG conventions, render modes) + Pages Router + React SPA |
+| `references/whats-new-2026.md` | Google I/O 2026, May 2026 core update, "AEO/GEO still SEO", llms.txt contested, AI-Mode query shift |
 | `references/structured-data.md` | Every schema type with ready JSON-LD: FAQPage, HowTo, Course, SoftwareApplication, Article, Breadcrumb, ItemList, Product. Policy rules (fake ratings). |
 | `references/titles-and-meta.md` | Title formula, the brand-suffix decision, meta description, OG/Twitter, canonical |
 | `references/content-and-aeo.md` | Answer-first writing, fact density, FAQ pattern, content hubs, the "problems/errors" play, courses |
@@ -69,6 +87,14 @@ not one task but several.
   SEO regardless.
 - **IndexNow does NOT notify Google** — only Bing/Yandex/DuckDuckGo/etc. Google
   uses its own crawl + Search Console.
+- **Detect the framework before implementing.** Next.js App Router uses the
+  Metadata API (`metadata`/`generateMetadata`) — not helmet, not prerender. Only
+  hand-rolled React SPAs need the Puppeteer prerender. Wrong tool = wasted work.
+- **Don't over-optimize for AI citations.** The May 2026 core update appears to
+  demote shallow answer-bait. Depth + real E-E-A-T + genuine fact density win;
+  thin Q&A spam is now a risk, not a hack.
+- **llms.txt is optional, low priority** — Google says it "isn't needed for AI
+  Search." Add it only if cheap; never before content/schema/indexing.
 
 ## The priority order (highest ROI first)
 

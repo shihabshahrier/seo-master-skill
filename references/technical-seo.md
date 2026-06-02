@@ -111,9 +111,13 @@ Disallow: /
 Sitemap: https://example.com/sitemap.xml
 ```
 
-## llms.txt (AI-readable summary)
+## llms.txt (AI-readable summary) — optional, low priority
 
-Host `/llms.txt` — a Markdown brief for LLMs. Template:
+Host `/llms.txt` — a Markdown brief for LLMs. **Contested in 2026**: no major AI
+engine confirms it as a grounding input; Google says it "isn't needed for AI
+Search" (mainly useful for docs sites). Cheap to add, but do NOT prioritize over
+content/schema/indexing, and don't treat its absence as a problem (see
+`whats-new-2026.md`). Template:
 
 ```markdown
 # brand.com

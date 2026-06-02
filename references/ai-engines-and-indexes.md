@@ -17,6 +17,33 @@ invisible to ChatGPT (Bing) and Claude (Brave). "Get indexed" is several tasks.
 Takeaway: **Bing and Brave indexing matter as much as Google now** because they
 feed ChatGPT and Claude. Most sites neglect Bing — that's the opportunity.
 
+(I/O 2026: Google AI Mode now defaults to **Gemini 3.5 Flash**, 1B+ monthly
+users, queries doubling each quarter — see `whats-new-2026.md`.)
+
+## Coding agents ground mostly on Brave (the developer-audience lane)
+
+If your audience is developers, the **coding agents** are a distinct, growing
+referral surface — and most of them search through the **Brave Search API**, not
+Google.
+
+| Agent | Web-search backend | Note |
+|-------|--------------------|------|
+| **Claude Code** | Brave Search (Anthropic web search / Brave skill) + open-web fetch | terminal coding agent |
+| **Codex** (OpenAI CLI) | Brave Search via the Agent Skills standard | also reaches Bing-grounded GPT models |
+| **OpenClaw** | Brave Search skill | 345k★ open agent |
+| **Hermes Agent** (Nous) | Brave Search skill | MIT, self-improving agent |
+| **Cursor / Windsurf / Gemini CLI / Copilot** | Brave Search skill (Gemini CLI also Google) | IDE/CLI agents |
+
+The common thread: Brave ships an official **brave-search-skills** package that
+plugs into Claude Code, Codex, Cursor, Gemini CLI, Copilot, Windsurf, OpenClaw,
+and others via the Agent Skills open standard. So **being well-indexed and
+cleanly crawlable by Brave makes you discoverable across nearly the entire
+coding-agent ecosystem at once.**
+
+Implication: for dev tools / technical products, **Brave crawlability is
+high-leverage** — clean server-rendered HTML, allowed UA in robots.txt, dense
+structured docs. One index (Brave) ≈ the whole agent fleet.
+
 ## How each platform cites (2026 observed patterns)
 
 - **ChatGPT**: heavily cites Wikipedia (~48% of factual citations), news, and
@@ -93,5 +120,8 @@ content." Bots that ignore signals (CCBot, Bytespider) can be hard-disallowed.
 ## llms.txt — the AI-readable site summary
 
 Host `/llms.txt` at the site root: a Markdown summary of what the site is, key
-URLs, and differentiators, written for LLMs. Not an official standard but
-increasingly read. See `technical-seo.md` for the template.
+URLs, and differentiators, written for LLMs. **Optional, low priority** — no
+major engine confirms it as a grounding/ranking input, and Google says it "isn't
+needed for AI Search" (useful mainly for docs). Add it if cheap; never prioritize
+it over content, schema, or indexing reach. See `whats-new-2026.md` for the full
+contested stance and `technical-seo.md` for the template.
