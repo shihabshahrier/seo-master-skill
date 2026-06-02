@@ -1,0 +1,5 @@
+interface:
+  display_name: "SEO Master"
+  short_description: "SEO + GEO + AEO playbook for 2026 — multi-engine indexing, Next.js/React, structured data."
+policy:
+  allow_implicit_invocation: true

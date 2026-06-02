@@ -1,0 +1,13 @@
+{
+  "hooks": {
+    "SessionStart": [{
+      "matcher": "startup|resume",
+      "hooks": [{
+        "type": "command",
+        "command": "echo 'seo-master skill available. /seo-master [site]. Steps: detect stack, map AI indexes, audit, fix (indexing -> schema -> content -> titles -> moat). See skills/seo-master/SKILL.md.'",
+        "timeout": 5,
+        "statusMessage": "Loading seo-master..."
+      }]
+    }]
+  }
+}

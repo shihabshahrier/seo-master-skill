@@ -1,0 +1,12 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "seo-master",
+  "description": "Complete SEO + GEO + AEO playbook for 2026.",
+  "owner": {"name": "shihabshahrier", "url": "https://github.com/shihabshahrier"},
+  "plugins": [{
+    "name": "seo-master",
+    "description": "Battle-tested SEO + GEO + AEO playbook: multi-engine indexing, Next.js/React implementation, structured data, agent-backend map.",
+    "source": "./",
+    "category": "developer-tools"
+  }]
+}

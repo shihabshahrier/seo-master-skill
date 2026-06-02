@@ -1,0 +1,19 @@
+---
+description: "seo-master — SEO/GEO/AEO playbook for 2026 when user invokes /seo-master"
+alwaysApply: false
+---
+
+When user says `/seo-master`, follow `skills/seo-master/SKILL.md`.
+
+**Invocation**: `/seo-master [site path or URL]`
+
+**Steps**:
+1. Detect the stack (Next.js App/Pages Router, React SPA, Astro…) — `references/framework-seo.md`.
+2. Map target AI engines/agents to their index (Bing/Brave/Google) — `references/ai-engines-and-indexes.md`.
+3. Audit, then fix: indexing reach → structured data → answer-first content → titles/meta → content moat.
+
+**Critical**:
+- Detect framework before implementing — Next.js uses the Metadata API, not prerender.
+- Never fabricate aggregateRating/reviews; FAQ schema requires visible on-page FAQ.
+- Coding agents (Claude Code/Codex/OpenClaw) ground on Brave — keep clean server HTML.
+- Don't over-optimize for AI citations (May 2026 core update risk); llms.txt is optional.
