@@ -60,17 +60,17 @@ The agent reads `SKILL.md` first, then pulls `references/*.md` as needed.
 
 ## Contents
 
-- **skills/seo-master/SKILL.md** — entry point: mental model, priority order, hard rules.
-- **references/ai-engines-and-indexes.md** — which index each AI + coding agent (Claude Code/Codex/OpenClaw → Brave; ChatGPT → Bing; Gemini → Google) uses; per-engine tactics. *Read first.*
-- **references/framework-seo.md** — detect the stack; Next.js App Router Metadata API + Pages Router + React SPA prerender.
-- **references/whats-new-2026.md** — Google I/O 2026, May core update, "AEO/GEO still SEO", llms.txt contested.
-- **references/structured-data.md** — every JSON-LD schema, ready to paste.
-- **references/titles-and-meta.md** — title formula, brand-suffix decision, meta/OG.
-- **references/content-and-aeo.md** — answer-first writing, fact density, content hubs, error-fix play, courses.
-- **references/technical-seo.md** — prerendering, sitemap, robots+Content-Signals, llms.txt, code-splitting, Core Web Vitals.
-- **references/search-console-setup.md** — Google + Bing + IndexNow, step by step.
-- **references/competitor-and-positioning.md** — research method, finding the open lane, off-site listicles.
-- **references/implementation-checklist.md** — prioritized, copy-paste audit + execution.
+- [**SKILL.md**](skills/seo-master/SKILL.md) — entry point: mental model, priority order, hard rules.
+- [**ai-engines-and-indexes.md**](skills/seo-master/references/ai-engines-and-indexes.md) — which index each AI + coding agent (Claude Code/Codex/OpenClaw → Brave; ChatGPT → Bing; Gemini → Google) uses; per-engine tactics. *Read first.*
+- [**framework-seo.md**](skills/seo-master/references/framework-seo.md) — detect the stack; Next.js App Router Metadata API + Pages Router + React SPA prerender.
+- [**whats-new-2026.md**](skills/seo-master/references/whats-new-2026.md) — Google I/O 2026, May core update, "AEO/GEO still SEO", llms.txt contested.
+- [**structured-data.md**](skills/seo-master/references/structured-data.md) — every JSON-LD schema, ready to paste.
+- [**titles-and-meta.md**](skills/seo-master/references/titles-and-meta.md) — title formula, brand-suffix decision, meta/OG.
+- [**content-and-aeo.md**](skills/seo-master/references/content-and-aeo.md) — answer-first writing, fact density, content hubs, error-fix play, courses.
+- [**technical-seo.md**](skills/seo-master/references/technical-seo.md) — prerendering, sitemap, robots+Content-Signals, llms.txt, code-splitting, Core Web Vitals.
+- [**search-console-setup.md**](skills/seo-master/references/search-console-setup.md) — Google + Bing + IndexNow, step by step.
+- [**competitor-and-positioning.md**](skills/seo-master/references/competitor-and-positioning.md) — research method, finding the open lane, off-site listicles.
+- [**implementation-checklist.md**](skills/seo-master/references/implementation-checklist.md) — prioritized, copy-paste audit + execution.
 
 ## How it works
 
