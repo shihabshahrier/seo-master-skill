@@ -70,6 +70,7 @@ not one task but several.
 | `references/search-console-setup.md` | Google Search Console, Bing Webmaster Tools + AI Performance, IndexNow (Cloudflare + script), submission steps |
 | `references/competitor-and-positioning.md` | How to research competitors, find the open lane, off-site listicle strategy |
 | `references/implementation-checklist.md` | Prioritized, copy-paste audit + execution checklist |
+| `references/gsc-diagnostics-and-recovery.md` | Diagnose a site FROM Search Console data: brand/non-brand segmentation, striking-distance vs page-2 cohorts, slash-pair detection, the prerendered-SPA canonical trap + fix recipe, CTR surgery that still works in 2026, CLS quick wins, verification curl checks |
 
 ## Hard rules (learned the hard way)
 
@@ -95,6 +96,23 @@ not one task but several.
   thin Q&A spam is now a risk, not a hack.
 - **llms.txt is optional, low priority** — Google says it "isn't needed for AI
   Search." Add it only if cheap; never before content/schema/indexing.
+- **Exactly ONE canonical per page, verified with curl on the deployed site.**
+  Prerendered SPAs bake the static index.html canonical into every page and
+  helmet adds a second — both wrong. The crawler reads baked HTML, not your
+  DevTools. (Found live on a 500-user product; suppressed the whole site.)
+- **Trailing slash: standardize on whatever the HOST redirects to** (Cloudflare
+  Pages 308s to slash). Canonicals, sitemap, og:url, and internal hrefs must all
+  use that one form, or GSC splits impressions across slash pairs.
+- **Segment GSC before concluding anything.** Blended CTR/position lie: split
+  brand vs non-brand, pos 4–15 (snippet problem) vs pos >15 (content-depth
+  problem). New-content launches drop blended metrics mechanically — mix shift,
+  not a penalty.
+- **FAQ rich results no longer show for normal sites** (gov/health only since
+  2023). Keep FAQPage for AI citation; for SERP CTR use title/meta rewrites and
+  ItemList-with-images on collection pages instead.
+- **Don't merge "duplicates" reflexively.** Two pages at pos 5–6 for one query =
+  double SERP presence (keep + differentiate); and near-identical slugs may be
+  genuinely different products — verify content before 301ing.
 
 ## The priority order (highest ROI first)
 
