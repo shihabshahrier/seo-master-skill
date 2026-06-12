@@ -101,3 +101,7 @@ The agent reads `SKILL.md` first, then pulls `references/*.md` as needed.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Verified facts only; edit the source in
 `skills/seo-master/`, not the synced agent files. MIT licensed.
+
+---
+
+📖 **Project page:** https://shihub.online/projects/seo-master-skill
